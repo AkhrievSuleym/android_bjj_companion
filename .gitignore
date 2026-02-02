@@ -13,3 +13,29 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Additional Kotlin/Android patterns
+*.class
+*.jar
+*.log
+*.apk
+*.ap_
+*.aab
+*.dex
+out/
+.kotlin/
+build/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE
+/.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db

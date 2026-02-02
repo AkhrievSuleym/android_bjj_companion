@@ -1,0 +1,11 @@
+package com.example.bjjcompanion.domain.model
+
+data class Food(
+    val fdcId: Int,
+    val name: String,
+    val caloriesPer100g: Float,
+    val proteinPer100g: Float,
+    val fatPer100g: Float,
+    val carbsPer100g: Float,
+    val isCustom: Boolean = false
+)
