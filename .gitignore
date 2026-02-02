@@ -39,3 +39,13 @@ build/
 
 # OS
 Thumbs.db
+
+# Claude and Spec Kit
+.claude/
+.specify/
+CLAUDE.md
+constitution.md
+project-spec.md
+tasks-plan.md
+tech-plan.md
+specs/
