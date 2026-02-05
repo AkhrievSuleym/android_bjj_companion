@@ -47,7 +47,7 @@ fun OnboardingScreen(
                 .padding(paddingValues)
         ) {
             when (uiState.currentStep) {
-                0 -> WelcomeStep(
+                0 -> com.example.bjjcompanion.presentation.onboarding.WelcomeStep(
                     onNext = { viewModel.nextStep() }
                 )
                 1 -> ProfileFormStep(
@@ -88,45 +88,6 @@ fun OnboardingScreen(
     }
 }
 
-@Composable
-private fun WelcomeStep(
-    onNext: () -> Unit
-) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(24.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text(
-            text = "Welcome to\nGrappling Companion",
-            style = MaterialTheme.typography.headlineLarge,
-            fontWeight = FontWeight.Bold,
-            textAlign = TextAlign.Center
-        )
-
-        Spacer(modifier = Modifier.height(24.dp))
-
-        Text(
-            text = "Your all-in-one app for tracking weight, nutrition, and BJJ training progress",
-            style = MaterialTheme.typography.bodyLarge,
-            textAlign = TextAlign.Center,
-            color = MaterialTheme.colorScheme.onSurfaceVariant
-        )
-
-        Spacer(modifier = Modifier.height(48.dp))
-
-        Button(
-            onClick = onNext,
-            modifier = Modifier.fillMaxWidth()
-        ) {
-            Text("Get Started")
-            Spacer(modifier = Modifier.width(8.dp))
-            Icon(Icons.AutoMirrored.Filled.ArrowForward, "Next")
-        }
-    }
-}
 
 @Composable
 private fun ProfileFormStep(
